@@ -1,0 +1,660 @@
+program 1 : Print hello world
+
+#include <stdio.h>
+int main()
+{
+printf("Hello, World!\n");
+return 0;
+}
+
+---
+Program 2: Write code for using all arithmetic operators
+
+#include <stdio.h>
+int main()
+{
+int a=20,b=2,sum,sub,mult,div,mod;
+sum=a+b;
+sub=a-b;
+mult=a*b;
+div=a/b;
+mod=a%b;
+
+printf("addition=%d\n",sum);
+printf("subtraction=%d\n",sub);
+printf("multiplication=%d\n",mult);
+printf("division=%d\n",div);
+printf("modulus=%d\n",mod);
+return 0;
+
+
+}
+
+                 OR
+
+arithmetic operators receiving input from the user
+
+#include <stdio.h>
+int main()
+{
+int a,b;
+printf("Enter two integers (a and b): ");
+scanf("%d %d",&a,&b);
+
+printf("\n--- Arithmetic Operations ---\n");
+printf("Addition (a + b) = %d\n", a + b);
+printf("Subtraction (a - b) = %d\n", a - b);
+printf("Multiplication (a * b) = %d\n", a * b);
+printf("Division (a / b) = %d\n", b != 0 ? a / b : 0);
+printf("Modulus (a %% b) = %d\n", b != 0 ? a % b : 0);
+return 0;
+}
+
+---
+
+Program 3: Write a program swapping of 2 numbers
+
+#include <stdio.h>
+int main()
+{
+int num1,num2,temp;
+printf("Enter the first and second number: ");
+scanf("%d %d",&num1,&num2);
+
+printf("\n--- Before swapping ---\n");
+printf("First number: %d\n", num1);
+printf("Second number: %d\n", num2);
+
+temp=num1;
+num1=num2;
+num2=temp;
+
+printf("\n--- After swapping ---\n");
+printf("First number: %d\n", num1);
+printf("Second number: %d\n", num2);
+return 0;
+}
+
+                 OR
+
+swapping of 2 numbers receiving input from the user
+#include <stdio.h>
+int main()
+{
+int a,b,c,d;
+int result;
+printf("Enter four integers (a, b, c, d): ");
+scanf("%d %d %d %d",&a,&b,&c,&d);
+
+printf("\nInitial values: a=%d, b=%d, c=%d, d=%d\n\n",a,b,c,d);
+
+printf("--- 1. Prefix Increment (++a) ---\n");
+result=++a;
+printf("Result: %d\n",result);
+printf("a after: %d\n\n",a);
+
+printf("--- 2. Postfix Increment (b++) ---\n");
+result=b++;
+printf("Result: %d\n",result);
+printf("b after: %d\n\n",b);
+
+printf("--- 3. Prefix Decrement (--c) ---\n");
+result=--c;
+printf("Result: %d\n",result);
+printf("c after: %d\n\n",c);
+
+printf("--- 4. Postfix Decrement (d--) ---\n");
+result=d--;
+printf("Result: %d\n",result);
+printf("d after: %d\n\n",d);
+return 0;
+}
+
+---
+
+Program 4: Write a program using the increment and decrement operators
+
+#include <stdio.h>
+int main()
+{
+int a,b,c,d;
+int result;
+a=10;
+b=10;
+c=10;
+d=10;
+
+printf("Initial values: a=10, b=10, c=10, d=10\n\n");
+
+printf("--- 1. Prefix Increment (++a) ---\n");
+result=++a;
+printf("Result: %d\n",result);
+printf("a after: %d\n\n",a);
+
+printf("--- 2. Postfix Increment (b++) ---\n");
+result=b++;
+printf("Result: %d\n",result);
+printf("b after: %d\n\n",b);
+
+printf("--- 3. Prefix Decrement (--c) ---\n");
+result=--c;
+printf("Result: %d\n",result);
+printf("c after: %d\n\n",c);
+
+printf("--- 4. Postfix Decrement (d--) ---\n");
+result=d--;
+printf("Result: %d\n",result);
+printf("d after: %d\n\n",d);
+
+return 0;
+}
+
+---
+
+Program 5: Write a program using logical operators
+
+#include <stdio.h>
+int main()
+{
+int a=10,b=5;
+printf("%d\n",a && b);
+printf("%d\n",a || b);
+printf("%d\n",a != b);
+return 0;
+}
+
+OR
+
+#include <stdio.h>
+int main()
+{
+int a=10,b=5,c=0;
+
+printf("Starting program with a=%d, b=%d, c=%d\n",a,b,c);
+
+printf("\n--- Logical AND (&&) ---\n");
+printf("(a>b)&&(b>c) -> %d\n",(a>b)&&(b>c));
+printf("(a>b)&&(b<c) -> %d\n",(a>b)&&(b<c));
+printf("(a<b)&&(b<c) -> %d\n\n",(a<b)&&(b<c));
+
+printf("--- Logical OR (||) ---\n");
+printf("(a>b)||(b>c) -> %d\n",(a>b)||(b>c));
+printf("(a>b)||(b<c) -> %d\n",(a>b)||(b<c));
+printf("(a<b)||(b<c) -> %d\n\n",(a<b)||(b<c));
+
+printf("--- Logical NOT (!) ---\n");
+printf("!(a>b) -> %d\n",!(a>b));
+printf("!(a<b) -> %d\n",!(a<b));
+printf("!a -> %d\n",!a);
+printf("!c -> %d\n",!c);
+
+printf("\nProgram finished.\n");
+return 0;
+}
+
+---
+
+Program 6: Use conditional operator
+
+#include <stdio.h>
+int main()
+{
+int a=10,b=15,c;
+c=(a>10)?a:b;
+printf("c=%d",c);
+return 0;
+}
+
+---
+
+Program 7: Combining relational and logical operator
+
+#include <stdio.h>
+int main()
+{
+int a,b;
+printf("Enter two integers (a and b): ");
+scanf("%d %d",&a,&b);
+
+if(b!=0)
+{
+    int expr1=(a,b && a/b);
+    printf("Result of (a, b && a / b): %d\n",expr1);
+}
+else
+{
+    printf("Cannot evaluate (a, b && a / b): division by zero!\n");
+}
+
+int expr2=(a>b && a==b);
+printf("Result of (a > b && a == b): %d\n",expr2);
+
+int expr3=(!a || !b);
+printf("Result of (!a || !b): %d\n",expr3);
+
+return 0;
+}
+
+---
+
+program 8: write a program using bitwise operator
+
+#include<stdio.h>
+int main()
+{
+    int a=5, b=3;
+    printf("a = %d, b = %d\n\n", a, b);
+    printf("bitwise AND (a & b) = %d\n ", a & b);
+     printf("bitwise OR (a | b)) = %d\n ", a | b);
+    printf("bitwise XOR (a ^ b) = %d\n ", a ^ b);
+    printf("left shift (a << 1) = %d\n ", a << 1);
+    printf("right shift (a >> 1) = %d\n ", a >> 1);
+
+    return 0;
+}
+
+---
+
+program 9: wirte a program using sizeof()
+
+#include <stdio.h>
+
+int main()
+{
+     printf("size of int: %lu bytes\n", sizeof(int));
+     printf("size of float: %lu bytes\n", sizeof(float));
+     printf("size of char: %lu bytes\n", sizeof(char));
+     printf("size of double: %lu bytes\n", sizeof(double));
+    return 0;
+}
+
+---
+
+program 10: example for c program for comma operator
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    c=(a=5, b=6, a+b);
+    printf("c=%d", c);
+    return 0;
+}
+
+---
+
+program 11: write a program for checking the eligibilty for voting
+
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >= 18)
+        printf("You are eligible to vote.\n");
+    else
+        printf("You are not eligible to vote.\n");
+
+    return 0;
+}
+
+---
+
+program 12: c program for student grade based on the total marks and display result (pass or fail)
+
+#include <stdio.h>
+
+int main() {
+    int m1, m2, m3, m4, m5, total;
+    float average;
+
+    printf("Enter marks of 5 subjects: ");
+    scanf("%d %d %d %d %d", &m1, &m2, &m3, &m4, &m5);
+
+    total = m1 + m2 + m3 + m4 + m5;
+    average = total / 5.0;
+
+    printf("Total Marks = %d\n", total);
+    printf("Average = %.2f\n", average);
+
+    if (average >= 90)
+        printf("Grade: A\n");
+    else if (average >= 75)
+        printf("Grade: B\n");
+    else if (average >= 50)
+        printf("Grade: C\n");
+    else
+        printf("Grade: Fail\n");
+
+    return 0;
+}
+
+                  OR
+
+#include <stdio.h>
+
+int main() {
+    int marks;
+
+    printf("Enter your marks: ");
+    scanf("%d", &marks);
+
+    if (marks > 90)
+        printf("Grade: A\n");
+    else if (marks > 85)
+        printf("Grade: B\n");
+    else if (marks > 70)
+        printf("Grade: C\n");
+    else if (marks > 60)
+        printf("Grade: D\n");
+    else if (marks > 50)
+        printf("Grade: E\n");
+    else
+        printf("Grade: Fail\n");
+
+    return 0;
+}
+
+
+---
+
+program 13: find the integer number for - and +.
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    printf("enter the value:", a);
+    scanf("%d", &a);
+    if(a > 0)
+    printf("the number %d is positive.", a);
+    else
+    printf("the number %d is negetive.", a);
+
+    return 0;
+}
+
+---
+
+program 14:find the largest number for 3 number.
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    printf("enter the 3 number:");
+    scanf("%d %d %d", &a, &b, &c);
+ 
+    if( a >= b && a >= c)
+    printf("%d is the largest number", a);
+    else if( b >= a && b >= c)
+    printf("%d is the largest number", b);
+    else
+    printf("%d is the largest number", c);
+ 
+    return 0;
+}
+
+---
+
+program 15: write a c prg for for loop.
+
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 0;i<=5 ;i++)
+    {
+    printf("initialigation %d\n", i);
+    }
+    return 0;
+}
+
+---
+
+Program 16: wriet a c prg for while loop.
+
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    while (i <= 5)
+    {
+        printf("i = %d\n", i);
+        i++;
+    }
+    return 0;
+}
+
+---
+
+Program 17: write a c prg for do while.
+
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    do {
+        printf("i = %d\n", i);
+        i++;
+    }
+    while (i <= 5);
+    return 0;
+}
+
+---
+
+Program 18: prg for sum of n number
+
+#include <stdio.h>
+int main() {
+    int n, i, sum = 0;
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+
+---
+
+Program 19: prg to print multipliacation table.
+
+#include <stdio.h>
+int main()
+{
+    int n, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Multiplication Table of %d:\n", n);
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}
+
+---
+
+Program 20: Find the factorial of a given number.
+
+#include <stdio.h>
+int main() {
+    int n, i;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n < 0)
+        printf("Factorial of a negative number doesn't exist.");
+    else {
+        for (i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        printf("Factorial of %d = %lld", n, fact);
+    }
+
+    return 0;
+}
+
+---
+
+PRogram 20: Write a C program for sum of digits
+
+#include <stdio.h>
+
+int main()
+{
+    int num, sum = 0, remainder;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while (num != 0)
+    {
+        remainder = num % 10;   // Get the last digit
+        sum = sum + remainder;  // Add it to sum
+        num = num / 10;         // Remove the last digit
+    }
+
+    printf("Sum of digits = %d\n", sum);
+    return 0;
+}
+
+eg: no is 567
+Remainder: 567 % 10 = 7
+Sum: 0 + 7 + 7
+Num: 567 / 10 = 56
+
+Remainder: 56 % 10 = 6
+Sum: 7 + 6 = 13
+Num: 56 / 1 = 5
+
+Remainder: 5 % 10 = 5
+Sum: 13 + 5 = 18
+Num: 5 / 10 = 0
+
+or
+0+7=7
+7+6=13
+13+518
+
+---
+
+Program 21: Write a C program for Prime Nmnber
+#include <stdio.h>
+
+int main() {
+    int n, i, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 1)
+        printf("%d is not a prime number", n);
+    else {
+        for (i = 1; i <= n; i++) {
+            if (n % i == 0)
+                count++;
+        }
+
+        if (count == 2)
+            printf("%d is a prime number", n);
+        else
+            printf("%d is not a prime number", n);
+    }
+
+    return 0;
+}
+
+
+OR
+
+#include<stdio.h>
+int main()
+{
+    int i,num, flag;
+    printf("enter no:");
+    scanf("%d", &num);
+ 
+    for(i=2; i<=num/2; i++)
+    {
+    if(num % i == 0)
+    {
+        flag=0;
+        break;
+    }
+    }
+    if(flag == 0)
+    printf("%d is not a prime number");
+    else
+    printf("%d is a prime number");
+    return 0;
+}
+
+---
+
+Program 22: wite a c program for function
+
+syntax : return_type function_name(argument)
+{
+return value;
+}
+
+#include<stdio.h>
+int add(int a,int b)
+{
+    return a + b;
+}
+int main()
+{
+    int sum= add(10, 6);
+    printf("%d", sum);
+    return 0;
+}
+
+ OR
+
+#include<stdio.h>
+void add(int,int);
+int main()
+{
+    int a=5, b=6;
+    add(a,b);
+    return 0;
+}
+
+void add(int a, int b)
+{
+    int c;
+    c= a+b;
+    printf("c=%d", c);
+}
+---
+
+square of a number.
+function to calculate factorial
+function to find the largest 2 number
+function to check even and odd
+function to find sum of digits
+
+1a. function with arrays with return type
+2b. function with arrays without argument
+3c. function without arrays with return type
+4b. function without array without argument
